@@ -1,10 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <memory>  // For std::unique_ptr
+#include <string>  // For std::string
 
 int main() {
-    const char* inputPath = "./images/Imagem.ppm";
-    const char* outputPath = "./images/NovaImagem.ppm";
+    std::string inputPath = "./images/Imagem.ppm";
+    std::string outputPath = "./images/NovaImagem.ppm";
 
     //Open source file in binary
     std::ifstream image(inputPath, std::ios::binary);
@@ -63,8 +64,8 @@ int main() {
 
 
 /* int main() {
-    const char* inputPath = "./images/Imagem.ppm";
-    const char* outputPath = "./images/NovaImagem.ppm";
+    std::string inputPath = "./images/Imagem.ppm";
+    std::string outputPath = "./images/NovaImagem.ppm";
 
     std::ifstream src(inputPath, std::ios::binary);
     std::ofstream dst(outputPath, std::ios::binary);
