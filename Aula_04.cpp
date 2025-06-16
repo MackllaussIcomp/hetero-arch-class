@@ -57,3 +57,25 @@ int main() {
     std::cout << "Image copied successfully.\n";
     return 0;
 }
+
+
+//VERSAO OTIMIZADA
+
+
+/* int main() {
+    const char* inputPath = "./images/Imagem.ppm";
+    const char* outputPath = "./images/NovaImagem.ppm";
+
+    std::ifstream src(inputPath, std::ios::binary);
+    std::ofstream dst(outputPath, std::ios::binary);
+
+    if (!src || !dst) {
+        std::cerr << "Error: Failed to open file(s).\n";
+        return 1;
+    }
+
+    dst << src.rdbuf(); // Using stream buffer
+
+    std::cout << "Image copied successfully (rdbuf method).\n";
+    return 0;
+} */
